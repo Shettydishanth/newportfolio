@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import { HTMLAttributes } from "react"; // <--- Add this import
 
-
-export const Container = styled.header`
+export const Container = styled.header<HTMLAttributes<HTMLElement>>` // <--- Modify this line
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -181,5 +181,4 @@ export const Container = styled.header`
       }
     }
   }
-  
-`
+`;

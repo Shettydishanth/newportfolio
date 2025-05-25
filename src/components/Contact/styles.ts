@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import { HTMLAttributes } from "react"; // <--- Add this import
 
-
-export const Container = styled.section`
+export const Container = styled.section<HTMLAttributes<HTMLElement>>` // <--- Modify this line
   margin-top: 10rem;
 
   header{
@@ -60,9 +60,8 @@ export const Container = styled.section`
       }
     }
   }
-  
-`
-/* old one - 2/1/2023 - 
+`;
+/* old one - 2/1/2023 -
 @media(max-width: 960px){
     .contacts{
       flex-direction: column;

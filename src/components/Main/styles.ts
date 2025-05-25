@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import { HTMLAttributes } from "react"; // <--- Add this import
 
-
-export const Container = styled.main`
+export const Container = styled.main<HTMLAttributes<HTMLElement>>` // <--- Modify this line
   position: relative;
   z-index: 0;
   padding: 0 10rem;
@@ -22,4 +22,4 @@ export const Container = styled.main`
   @media(max-width: 360px){
     padding: 0 2rem;
   }
-`
+`;

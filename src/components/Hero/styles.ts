@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { HTMLAttributes } from "react"; // <--- Add this import
 
-export const Container = styled.section`
+export const Container = styled.section<HTMLAttributes<HTMLElement>>` // <--- Modify this line
   padding-top: 15%;
   display: flex;
   justify-content: space-between;
@@ -73,4 +74,4 @@ export const Container = styled.section`
   @media(max-width: 480px){
     margin-top: 45%;
   }
-`
+`;

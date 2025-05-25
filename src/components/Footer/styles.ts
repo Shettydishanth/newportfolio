@@ -1,14 +1,13 @@
 import styled from "styled-components";
+import { HTMLAttributes } from "react"; // CORRECT: This import is necessary
 
-
-export const Container = styled.footer`
+export const Container = styled.footer<HTMLAttributes<HTMLElement>>` // CORRECT: This properly types the styled component
   background-color: #2b2b2b;
   padding: 3rem 15rem;
   margin-top: 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 
   .logo{
     font-size: 2.8rem;
@@ -36,7 +35,6 @@ export const Container = styled.footer`
     }
   }
 
-
   @keyframes spinning {
     0%{
       transform: rotate(0);
@@ -58,4 +56,4 @@ export const Container = styled.footer`
       font-size: 1.2rem;
     }
   }
-`
+`;
